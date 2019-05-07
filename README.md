@@ -2,14 +2,36 @@
 
 A bunch of gorilla repl worksheets for Clj resources.
 
-## Usage
+Here's some extra resources for you
 
-1. [Clojure Java interop][interop-ws]
+## Clojure - Java Interop: Using Java in Clojure
 
-## More
+1. [Worksheet][interop-ws]
+2. [Official Clojure Docs][clj-site-cjinterop]
+3. [Clojure-doc article][clj-doc-cjinterop]
+4. [DZone article][dz-cjintoper]
+
+## Clojure - Java Interop: Using Clojure in Java
+
+1. [Calling Clojure from Java][so-clj-in-java]
+
+## Extra Resources
 
 1. [Clojure Docs][clj-docs], for more information on specific Clojure functions.
+2. [Gorilla REPL][g-repl-site], for making worksheets.
 
----
+
+<!-- Links for cited resources -->
+-----
+<!-- Using Java in Clojure -->
 [interop-ws]: http://viewer.gorilla-repl.org/view.html?source=github&user=admay&repo=gorilla-worksheets&path=ws/java-in-clojure.clj#
+[clj-site-cjinterop]: https://clojure.org/reference/java_interop
+[clj-doc-cjinterop]: http://clojure-doc.org/articles/language/interop.html
+[dz-cjinterop]: https://dzone.com/articles/clojure-java-interop
+
+<!-- Using Clojure in Java -->
+[so-clj-in-java]: https://stackoverflow.com/questions/2181774/calling-clojure-from-java#23555959
+
+<!-- Extra Resources -->
 [clj-docs]: https://clojuredocs.org/
+[g-repl-site]: http://gorilla-repl.org/
