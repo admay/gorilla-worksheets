@@ -15,6 +15,12 @@ Here's some extra resources for you
 
 1. [Calling Clojure from Java][so-clj-in-java]
 
+## Transient Data Structures
+
+1. [Worksheet][transient-ws]
+2. [Official Clojure Docs][clj-site-transients]
+3. [Hyperion Transients Article][hyperion-transients]
+
 ## Extra Resources
 
 1. [Clojure Docs][clj-docs], for more information on specific Clojure functions.
@@ -31,6 +37,11 @@ Here's some extra resources for you
 
 <!-- Using Clojure in Java -->
 [so-clj-in-java]: https://stackoverflow.com/questions/2181774/calling-clojure-from-java#23555959
+
+<!-- Transient Data Structures -->
+[transient-ws]: http://viewer.gorilla-repl.org/view.html?source=github&user=admay&repo=gorilla-worksheets&path=ws/transients.clj#
+[clj-site-transients]: https://clojure.org/reference/transients
+[hyperion-transients]: https://hypirion.com/musings/understanding-clojure-transients
 
 <!-- Extra Resources -->
 [clj-docs]: https://clojuredocs.org/
