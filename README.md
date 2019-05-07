@@ -1,36 +1,10 @@
 # cookbook
 
-FIXME: description
-
-## Installation
-
-Download from http://example.com/FIXME.
+A bunch of gorilla repl worksheets for Clj resources.
 
 ## Usage
 
-FIXME: explanation
+1. [Clojure Java interop][0]
 
-    $ java -jar cookbook-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2019 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+---
+[0]: http://viewer.gorilla-repl.org/view.html?source=github&user=admay&repo=gorilla-worksheets&path=ws/java-in-clojure.clj#
