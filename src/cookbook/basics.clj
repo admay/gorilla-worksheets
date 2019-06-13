@@ -144,6 +144,7 @@ foo
 
 ;; @@
 ;; functions
+;; how to use them
 ;; and how to define them
 (defn function-name [arg-1 arg-2]
   (prn (format "Do some stuff here with %s and %s" arg-1 arg-2)))
@@ -178,5 +179,28 @@ bad-err
 ;; <=
 
 ;; @@
+(comment
 
+All Clojure functions are called in the same way
+(function arg-1 arg-2 ... etc)
+ 
+It's part of Clojure's commitment to simplicity
+There are no in-fix functions in Clojure like in Java and Python
+ 
+e.g. 2 + 2 
+ 
+There are also no function chains
+
+e.g. "string".upper().replace("i", " - I - ").split("")
+ 
+What you can do is compose them like so,
+ 
+(split (replace (upper "string") "i" " -I - "))
+
+Code style is very important to maintain due to the density of Clojure. So make sure to keep things nice and clean
+
+)
 ;; @@
+;; =>
+;;; {"type":"html","content":"<span class='clj-nil'>nil</span>","value":"nil"}
+;; <=
