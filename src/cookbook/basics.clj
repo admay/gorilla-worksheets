@@ -1,18 +1,31 @@
 ;; gorilla-repl.fileformat = 1
 
-;; **
-;;; # Gorilla REPL
-;;; 
-;;; Welcome to gorilla :-)
-;;; 
-;;; Shift + enter evaluates code. Hit alt+g twice in quick succession or click the menu icon (upper-right corner) for more commands ...
-;;; 
-;;; It's a good habit to run each worksheet in its own namespace: feel free to use the declaration we've provided below if you'd like.
-;; **
+;; @@
+(comment 
+ 
+Shift + enter evaluates code. 
+Hit alt+g twice in quick succession or click the menu icon [upper-right corner] for more commands.
+
+This namespace is for the very basics of Clojure.
+We'll go over,
+1. basic forms
+2. how to write and s-expression
+3. if, do, when
+4. truthiness
+5. and, or
+6. naming values
+7. defining functions
+ 
+)
+;; @@
+;; =>
+;;; {"type":"html","content":"<span class='clj-nil'>nil</span>","value":"nil"}
+;; <=
 
 ;; @@
 (ns crashcourse
   (:require [gorilla-plot.core :as plot]))
+
 ;; @@
 ;; =>
 ;;; {"type":"html","content":"<span class='clj-nil'>nil</span>","value":"nil"}
@@ -20,16 +33,19 @@
 
 ;; @@
 ;; forms
-1
-"Hello"
-['s' \S 1.0 :foo]
+1 ;; number
+"Hello" ;; string
+['s' \S 1.0 :foo] ;; this is a vectory, clj's second best friend
+'(1 2 3) ;; this is a basic list, we won't use these too much
+{:key "val", :other-key "other val"} ;; this is a map, clj's best friend
+#{:this :is :a :set :no :duplicates :allowed} ;; add a duplicate :a and watch
 ;; @@
 ;; =>
-;;; {"type":"list-like","open":"<span class='clj-vector'>[</span>","close":"<span class='clj-vector'>]</span>","separator":" ","items":[{"type":"html","content":"<span class='clj-symbol'>s&#x27;</span>","value":"s'"},{"type":"html","content":"<span class='clj-char'>\\S</span>","value":"\\S"},{"type":"html","content":"<span class='clj-double'>1.0</span>","value":"1.0"},{"type":"html","content":"<span class='clj-keyword'>:foo</span>","value":":foo"}],"value":"[s' \\S 1.0 :foo]"}
+;;; {"type":"list-like","open":"<span class='clj-set'>#{</span>","close":"<span class='clj-set'>}</span>","separator":" ","items":[{"type":"html","content":"<span class='clj-keyword'>:duplicates</span>","value":":duplicates"},{"type":"html","content":"<span class='clj-keyword'>:is</span>","value":":is"},{"type":"html","content":"<span class='clj-keyword'>:this</span>","value":":this"},{"type":"html","content":"<span class='clj-keyword'>:set</span>","value":":set"},{"type":"html","content":"<span class='clj-keyword'>:no</span>","value":":no"},{"type":"html","content":"<span class='clj-keyword'>:a</span>","value":":a"},{"type":"html","content":"<span class='clj-keyword'>:allowed</span>","value":":allowed"}],"value":"#{:duplicates :is :this :set :no :a :allowed}"}
 ;; <=
 
 ;; @@
-;; s-expressions
+;; s-expressions, how we do Clojure
 ;; (function arg-1 arg-2 arg-3)
 (+ 1 2 3 4 5)
 (str "Hello " "Dave " "and " "Sami!")
@@ -39,7 +55,7 @@
 ;; <=
 
 ;; @@
-;; if
+;; if statements
 (if (= 1 2)
   (prn "They're equal")
   (prn "Damn..."))
@@ -53,7 +69,7 @@
 ;; <=
 
 ;; @@
-;; do
+;; do blocks
 (do (prn "Do something")
     (prn "Do something else")
   	"Return the last value")
@@ -68,7 +84,7 @@
 ;; <=
 
 ;; @@
-;; when
+;; when statements
 (when true
   (prn "Truth will out!")
   "We're done here")
@@ -83,6 +99,7 @@
 
 ;; @@
 ;; truthiness
+;; how do these act as the condition of an `if` statement
 (defn truthy? [x]
   (if x
     true
@@ -99,6 +116,7 @@
 
 ;; @@
 ;; =
+;; equality
 (= 1 1)
 (= 1 2)
 ;; @@
@@ -107,7 +125,7 @@
 ;; <=
 
 ;; @@
-;; and or
+;; and/or
 (and true false)
 (or true false)
 ;; @@
@@ -126,6 +144,7 @@ foo
 
 ;; @@
 ;; functions
+;; and how to define them
 (defn function-name [arg-1 arg-2]
   (prn (format "Do some stuff here with %s and %s" arg-1 arg-2)))
 
@@ -142,6 +161,7 @@ foo
 ;; @@
 ;; putting this all together
 (defn err-msg
+  "Returns an error message based on the provided severity"
   [severity]
   (if (= severity :mild)
     "I'm mildly inconvenienced"
