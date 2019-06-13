@@ -9,7 +9,7 @@ Here's some extra resources for you
 1. [Worksheet][interop-ws]
 2. [Official Clojure Docs][clj-site-cjinterop]
 3. [Clojure-doc article][clj-doc-cjinterop]
-4. [DZone article][dz-cjintoper]
+4. [DZone article][dz-cjinterop]
 
 ## Clojure - Java Interop: Using Clojure in Java
 
